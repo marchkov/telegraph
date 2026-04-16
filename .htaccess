@@ -1,0 +1,37 @@
+# === БАЗОВОЕ ===
+Options -Indexes
+AddDefaultCharset utf-8
+
+<IfModule mod_php.c>
+  php_value upload_max_filesize 10M
+  php_value post_max_size 12M
+  php_value memory_limit 128M
+</IfModule>
+
+# === ЧПУ: /CODE -> view.php?code=CODE ===
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Если проект в подкаталоге, раскомментируй и поставь правильный путь:
+  # RewriteBase /clanek.marchkov.cloud/
+
+  # Пропускаем реальные файлы/папки
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Любая "словесная" строка — это code
+  RewriteRule ^([A-Za-z0-9_-]+)$ view.php?code=$1 [L,QSA]
+</IfModule>
+
+# === ЗАЩИТА БАЗЫ ДАННЫХ ===
+# Не даём скачать .db/.sqlite файлы напрямую
+<FilesMatch "^(database\.db|.*\.sqlite3?)$">
+  Require all denied
+</FilesMatch>
+
+# (опционально) запретим доступ к .env/конфигам, если появятся
+<FilesMatch "^(\.env|composer\.(json|lock)|\.gitignore|\.htaccess)$">
+  Require all denied
+</FilesMatch>
+
+# sitemap.xml -> sitemap.php
+RewriteRule ^sitemap\.xml$ sitemap.php [L,QSA]

@@ -1,0 +1,15 @@
+database.db
+database.db-*
+*.sqlite
+*.sqlite3
+
+php-server*.log
+*.log
+
+uploads/*
+!uploads/.htaccess
+!uploads/favicon.png
+
+.env
+.DS_Store
+Thumbs.db

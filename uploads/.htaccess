@@ -1,0 +1,9 @@
+# Разрешаем отдавать только изображения и web-статику
+<FilesMatch "\.(php|phtml|phar|cgi|pl|asp|aspx|jsp|sh|py)$">
+  Require all denied
+</FilesMatch>
+
+# На всякий случай выключим PHP, если он включён директивами выше по дереву
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
