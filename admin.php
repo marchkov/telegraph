@@ -259,7 +259,7 @@ $storedKey = setting_get($pdo, 'indexnow_key') ?? '';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     :root {
@@ -284,7 +284,7 @@ $storedKey = setting_get($pdo, 'indexnow_key') ?? '';
       font-family: 'PT Mono', ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
     }
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'PT Serif', Georgia, "Times New Roman", serif;
+      font-family: 'PT Sans', Arial, sans-serif;
     }
     .container { max-width: 960px; }
     .table td, .table th { vertical-align: middle; }

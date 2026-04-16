@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   color-scheme: dark;
@@ -43,7 +43,7 @@ h4,
 h5,
 h6 {
   color: var(--text);
-  font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
+  font-family: 'PT Sans', Arial, sans-serif;
 }
 
 h1 {
@@ -145,7 +145,7 @@ form button {
 
 .ce-header {
   color: var(--text);
-  font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
+  font-family: 'PT Sans', Arial, sans-serif;
 }
 
 .ce-toolbar__plus,
