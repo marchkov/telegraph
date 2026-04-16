@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Serif:wght@400;700&display=swap');
 
 :root {
   color-scheme: dark;
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'PT Mono', ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
   background:
     radial-gradient(circle at top left, rgba(73, 198, 161, 0.08), transparent 34rem),
     linear-gradient(180deg, #11100f 0%, #151413 100%);
@@ -43,6 +43,7 @@ h4,
 h5,
 h6 {
   color: var(--text);
+  font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
 }
 
 h1 {
@@ -95,6 +96,7 @@ form button {
 }
 
 .form-control {
+  font-family: 'PT Mono', ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
   background-color: var(--panel-bg);
   border-color: var(--line);
   color: var(--text);
@@ -136,9 +138,14 @@ form button {
 }
 
 .codex-editor,
-.ce-paragraph,
+.ce-paragraph {
+  color: var(--text);
+  font-family: 'PT Mono', ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+}
+
 .ce-header {
   color: var(--text);
+  font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
 }
 
 .ce-toolbar__plus,
