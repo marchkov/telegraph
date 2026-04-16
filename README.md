@@ -16,7 +16,6 @@
 ## Локальный запуск
 
 ```powershell
-cd D:\Denis\clanek
 .\start-local.ps1
 ```
 
